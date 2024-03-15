@@ -1,0 +1,16 @@
+{
+  "name": "amazon-scraping-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "playwright": "^1.42.1",
+    "playwright-core": "^1.42.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Paulo Henrique Ribeiro Alves",
+  "license": "ISC"
+}
