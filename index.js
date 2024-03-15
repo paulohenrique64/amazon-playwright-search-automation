@@ -24,10 +24,22 @@ async function main() {
     // opening amazon website and setting location
     const page = await browser.newPage();
     await pauseAndScreenshot(page);
-    await page.goto('https://www.amazon.com', { timeout: 2 * 60 * 1000});
-    console.log('Amazon website opened...');
-    await pauseAndScreenshot(page);
-    await page.locator('#nav-global-location-popover-link').click();
+    
+    let reloadPage = true;
+    while (reloadPage) {
+        await page.goto('https://www.amazon.com', { timeout: 2 * 60 * 1000});
+        console.log('Amazon website opened...');
+        await pauseAndScreenshot(page);
+
+        try {
+            await page.locator('#nav-global-location-popover-link').click();
+            reloadPage = false;
+        } catch (e) {
+            if (e instanceof playwright.errors.TimeoutError) 
+                console.log("Website load error, reloading...");
+        }
+    }
+
     await pauseAndScreenshot(page);
     await page.locator('.GLUX_Full_Width').fill("11001");
     await pauseAndScreenshot(page);
