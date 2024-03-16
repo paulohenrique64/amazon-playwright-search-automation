@@ -50,7 +50,6 @@ async function main() {
     console.log('Location 11001 selected...');
 
     // search
-    searched_keyword = 'mechanical keyboard'
     await page.fill('#twotabsearchtextbox', search_keyword);
     await pauseAndScreenshot(page);
     await page.click('#nav-search-submit-button');
