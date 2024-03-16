@@ -9,6 +9,8 @@ I chose <strong> Playwright </strong> for this project due to its compatibility 
 3. Install dependencies: `npm install` or  `yarn install`
 4. Run: `npm run start 'your search keyword'` or `yarn run start 'your search keyword'`
 
+<strong>Tip:</strong> You can follow the automation steps by viewing the `page.png` photo during the process.
+
 ## :rocket: For more informations
 
 - **[Playwright Documentation](https://playwright.dev/docs/intro)**
