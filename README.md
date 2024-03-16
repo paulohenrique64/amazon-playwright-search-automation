@@ -1,22 +1,24 @@
-## Technologies used and requirements
+### Technologies used and requirements
 
 - Node LTS
 - NPM or Yarn
 - Playwright
 
-## About
+### About
 
-I chose <strong> Playwright </strong> for this project due to its compatibility with multiple browsers, such as Chromium and Firefox, as well as its intuitive usability and excellent scalability.
+I chose Playwright for this project due to its compatibility with multiple browsers, such as Chromium and Firefox, as well as its intuitive usability and excellent scalability.
 
-## 🛠 Installation and Setup Instructions
+### Installation and Setup Instructions
 
-1. Clone this repository: `git clone https://github.com/paulohenrique64/amazon-playwright-search-automation.git`
-2. Go to project directory: `cd amazon-playwright-search-automation`
-3. Install playwright: `npx playwright install`
-4. Install dependencies: `npm install` or  `yarn install`
-5. Run: `npm run start "search keyword"` or `yarn run start "search keyword"`
+```Shell
+git clone https://github.com/paulohenrique64/amazon-playwright-search-automation.git
+cd amazon-playwright-search-automation
+npm install
+npx playwright install
+npm run start "mechanical keyboard"
+```
 
-## :rocket: For more informations
+### For more informations
 
 - **[Playwright Documentation](https://playwright.dev/docs/intro)**
 
