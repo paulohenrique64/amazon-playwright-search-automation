@@ -21,13 +21,13 @@ async function main() {
 
     // opening amazon website and setting location
     const page = await browser.newPage();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     
     let reloadPage = true;
     while (reloadPage) {
         await page.goto('https://www.amazon.com', { timeout: 2 * 60 * 1000});
         console.log('Amazon website opened...');
-        await page.waitForTimeout(1000);
+        await page.waitForTimeout(2000);
 
         try {
             await page.locator('#nav-global-location-popover-link').click();
@@ -38,21 +38,21 @@ async function main() {
         }
     }
 
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     await page.locator('.GLUX_Full_Width').fill("11001");
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     await page.locator('[class="a-column a-span4 a-span-last"]').getByText('Apply').click()
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     await page.click('.a-popover-footer > .a-button.a-column.a-button-primary.a-button-span4 > .a-button-inner.a-declarative');
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     console.log('Location 11001 selected...');
 
  
     // searching
     await page.fill('#twotabsearchtextbox', search_keyword);
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     await page.click('#nav-search-submit-button');
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     console.log(`Searching for ${search_keyword}...`);
 
     let founded = false;
@@ -62,7 +62,7 @@ async function main() {
             founded = true;
 
             await product.locator('[class="s-image"]').first().click();
-            await page.waitForTimeout(1000);
+            await page.waitForTimeout(2000);
             break;
         }
     }
